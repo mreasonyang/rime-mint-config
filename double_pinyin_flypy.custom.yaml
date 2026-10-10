@@ -1,0 +1,98 @@
+# ============================================================
+# 薄荷 · 小鹤双拼（double_pinyin_flypy）方案级自定义
+# 修改后部署：Squirrel --reload
+# ============================================================
+patch:
+
+  # ── 语言模型：万象 LTS ──
+  "grammar/language": wanxiang-lts-zh-hans
+  "grammar/collocation_max_length": 8
+  "grammar/collocation_min_length": 2
+  "grammar/collocation_penalty": -16
+  "grammar/non_collocation_penalty": -8
+  "grammar/weak_collocation_penalty": -100
+  "grammar/rear_penalty": -20
+  "translator/contextual_suggestions": true
+  "translator/max_homophones": 7
+  "translator/max_homographs": 7
+
+  # ── 编辑区显示 ──
+  # 显示“双拼按键”（不展开成全拼）；想改回显示全拼就注释掉下面一行
+  "translator/preedit_format": []
+
+  # ── 输入编码长度上限（原 25，调大支持长句）──
+  codeLengthLimit_processor: 100
+
+  # ── 候选词个数 ──
+  "menu/page_size": 6
+
+  # ── 长词优先（count=提升几个长词, idx=插到第几位）──
+  "engine/filters/@before 3": lua_filter@*long_word_filter
+  long_word_filter:
+    count: 2
+    idx: 4
+
+  # 想隐藏候选旁的拼音注释（缩窄候选窗）：取消下面一行注释，再 --reload
+  # "translator/spelling_hints": 0
+
+  # ── 默认中文/英文状态：默认“英文” ──
+  # 中文的 app 通过 squirrel.yaml 的 app_options 覆盖为 ascii_mode: false
+  # 注意：switches 是列表，只能整体替换，所以要写全（其余保持与原方案一致）
+  switches:
+    - name: ascii_mode
+      reset: 1
+      states: [ 中文, 英文 ]
+    - name: emoji_suggestion
+      states: [ "😣️","😁️" ]
+      reset: 1
+    - name: full_shape
+      states: [ 半角, 全角 ]
+      reset: 0
+    - name: tone_display                  # 实时声调全拼（super_preedit.lua）
+      states: [ 声杳, 声起 ]
+      reset: 0
+    - name: transcription
+      states: [ 简体 , 繁体 ]
+      reset: 0
+    - name: ascii_punct
+      states: [ "。，", "．，" ]
+      reset: 0
+    - name: chaifen        # 拆字滤镜（快捷键 Control+Shift+C）
+      states: [ 🙈, 🐵 ]
+      reset: 0
+
+  # ── 标点映射（整表覆盖）：对齐 macOS 系统输入法（/ 与「」按你的要求保留）──
+  "punctuator/half_shape":
+    " ": " "
+    ",": "，"
+    ".": "。"
+    "?": "？"
+    ";": "；"
+    ":": "："
+    "!": "！"
+    "^": "……"
+    "(": "（"
+    ")": "）"
+    "'": { pair: ["「", "」"] }
+    '"': { pair: ["“", "”"] }
+    "<": "《"
+    ">": "》"
+    "[": "【"
+    "]": "】"
+    "{": "「"
+    "}": "」"
+    "/": "/"
+    "\\": "、"
+    "-": "－"
+    "_": "——"
+    "+": "＋"
+    "=": "＝"
+    "|": "｜"
+    "$": "￥"
+    "%": "％"
+    "@": "＠"
+    "#": "＃"
+    "~": "～"
+    "&": "＆"
+    "*": "＊"
+    "`": "·"

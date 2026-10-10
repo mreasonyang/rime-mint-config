@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# 大文件不入库：万象 LTS 语言模型由 install.sh 自动下载
+*.gram
+
+# 备份文件
+*.bak
+*.bak.*

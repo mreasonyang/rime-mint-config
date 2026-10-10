@@ -1,0 +1,30 @@
+# ============================================================
+# 薄荷输入法 (oh-my-rime) · 用户自定义
+# 修改后：Squirrel 菜单栏 → 重新部署
+# ============================================================
+patch:
+  # ── 输入方案：小鹤双拼为默认，全拼/混输备选 ──
+  schema_list:
+    - schema: rime_mint_flypy       # 薄荷拼音·小鹤混输（全拼+小鹤，默认）
+    - schema: double_pinyin_flypy   # 小鹤双拼（纯双拼）
+    - schema: rime_mint             # 薄荷拼音·全拼
+
+  # ── Shift 切换中英文 ──
+  ascii_composer:
+    good_old_caps_lock: true
+    switch_key:
+      Caps_Lock: clear
+      Shift_L: commit_code
+      Shift_R: commit_code
+      Control_L: noop
+      Control_R: noop
+
+  # ── Vim 风翻页：Ctrl/Alt + j/k 都支持 ──
+  # 用 @before 0..3 插到列表最前，保证 Ctrl+k 覆盖原有的“删除到行尾”
+  "key_binder/bindings/@before 0": { when: composing, accept: "Control+k", send: Page_Up }
+  "key_binder/bindings/@before 1": { when: composing, accept: "Alt+k",     send: Page_Up }
+  "key_binder/bindings/@before 2": { when: composing, accept: "Control+j", send: Page_Down }
+  "key_binder/bindings/@before 3": { when: composing, accept: "Alt+j",     send: Page_Down }
+
+  # ── Shift+空格 容易误触全角，改回普通空格；全角开关保留（菜单 / Ctrl+Shift+3 仍可切）──
+  "key_binder/bindings/@before 4": { when: always, accept: "Shift+space", send: space }
