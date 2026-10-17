@@ -28,3 +28,7 @@ patch:
 
   # ── Shift+空格 容易误触全角，改回普通空格；全角开关保留（菜单 / Ctrl+Shift+3 仍可切）──
   "key_binder/bindings/@before 4": { when: always, accept: "Shift+space", send: space }
+
+  # ── Ctrl+. 恢复中文标点，避免误切西文标点后中文模式的 - 直出半角 ──
+  # 需要临时使用西文标点时，仍可在方案菜单切换。
+  "key_binder/bindings/@before 5": { when: always, accept: "Control+period", unset_option: ascii_punct }
