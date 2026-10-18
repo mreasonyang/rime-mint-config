@@ -65,19 +65,19 @@ patch:
     com.tinycast.app:                          { ascii_mode: true }   # Tinycast
     net.kovidgoyal.kitty:                      { ascii_mode: true }   # kitty
 
-    # ── 固定中文（原映射 Rime）：激活应用时一并恢复中文标点 ──
-    com.google.antigravity:        { ascii_mode: false, ascii_punct: false }   # Antigravity
-    com.openai.chat:               { ascii_mode: false, ascii_punct: false }   # ChatGPT
-    com.openai.codex:              { ascii_mode: false, ascii_punct: false }   # ChatGPT (codex)
-    com.google.GeminiMacOS:        { ascii_mode: false, ascii_punct: false }   # Gemini
-    com.google.Chrome:             { ascii_mode: false, ascii_punct: false }   # Google Chrome
-    com.anysphere.sand:            { ascii_mode: false, ascii_punct: false }   # Grok Bot
-    com.meta.endo:                 { ascii_mode: false, ascii_punct: false }   # Muse
-    com.apple.Notes:               { ascii_mode: false, ascii_punct: false }   # Notes
-    notion.id:                     { ascii_mode: false, ascii_punct: false }   # Notion
-    md.obsidian:                   { ascii_mode: false, ascii_punct: false }   # Obsidian
-    io.appmakes.otty:              { ascii_mode: false, ascii_punct: false }   # Otty
-    sh.paseo.desktop:              { ascii_mode: false, ascii_punct: false }   # Paseo
-    com.apple.ScreenSharing:       { ascii_mode: false, ascii_punct: false }   # Screen Sharing
-    ru.keepcoder.Telegram:         { ascii_mode: false, ascii_punct: false }   # Telegram
-    com.tencent.xinWeChat:         { ascii_mode: false, ascii_punct: false }   # WeChat
+    # ── 固定中文（原映射 Rime）──
+    com.google.antigravity:        { ascii_mode: false }   # Antigravity
+    com.openai.chat:               { ascii_mode: false }   # ChatGPT
+    com.openai.codex:              { ascii_mode: false }   # ChatGPT (codex)
+    com.google.GeminiMacOS:        { ascii_mode: false }   # Gemini
+    com.google.Chrome:             { ascii_mode: false }   # Google Chrome
+    com.anysphere.sand:            { ascii_mode: false }   # Grok Bot
+    com.meta.endo:                 { ascii_mode: false }   # Muse
+    com.apple.Notes:               { ascii_mode: false }   # Notes
+    notion.id:                     { ascii_mode: false }   # Notion
+    md.obsidian:                   { ascii_mode: false }   # Obsidian
+    io.appmakes.otty:              { ascii_mode: false }   # Otty
+    sh.paseo.desktop:              { ascii_mode: false }   # Paseo
+    com.apple.ScreenSharing:       { ascii_mode: false }   # Screen Sharing
+    ru.keepcoder.Telegram:         { ascii_mode: false }   # Telegram
+    com.tencent.xinWeChat:         { ascii_mode: false }   # WeChat
