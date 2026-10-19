@@ -3,10 +3,10 @@
 # 修改后：Squirrel 菜单栏 → 重新部署
 # ============================================================
 patch:
-  # ── 输入方案：小鹤双拼为默认，全拼/混输备选 ──
+  # ── 输入方案：纯小鹤双拼为默认，混输/全拼备选 ──
   schema_list:
-    - schema: rime_mint_flypy       # 薄荷拼音·小鹤混输（全拼+小鹤，默认）
-    - schema: double_pinyin_flypy   # 小鹤双拼（纯双拼）
+    - schema: double_pinyin_flypy   # 小鹤双拼（纯双拼，默认）
+    - schema: rime_mint_flypy       # 薄荷拼音·小鹤混输（全拼+小鹤）
     - schema: rime_mint             # 薄荷拼音·全拼
 
   # ── Shift 切换中英文 ──

@@ -9,7 +9,7 @@
 ## 它能给你什么
 
 - **前端**：鼠须管 Squirrel（macOS）
-- **默认方案**：薄荷·小鹤混输（全拼、小鹤都能打，无需切换）；备选纯小鹤双拼、薄荷·全拼
+- **默认方案**：纯小鹤双拼；备选薄荷·小鹤混输（全拼+小鹤）、薄荷·全拼
 - **词库与语言模型**：薄荷基座自带**万象词库** + **万象 LTS** 整句语言模型（`wanxiang-lts-zh-hans.gram`，脚本自动下载）
 - **默认中英状态**：默认**英文**；未列出的 App 默认英文
 - **按 App 自动中英**：15 个 App 固定中文（微信、Telegram、Chrome、Obsidian、Notion、ChatGPT、Gemini……），6 个固定英文（Finder、kitty、系统设置、Clash Verge、Karabiner、Tinycast）
