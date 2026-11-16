@@ -78,6 +78,7 @@ patch:
     md.obsidian:                   { ascii_mode: false }   # Obsidian
     io.appmakes.otty:              { ascii_mode: false }   # Otty
     sh.paseo.desktop:              { ascii_mode: false }   # Paseo
+    com.t3tools.t3code:            { ascii_mode: false }   # T3 Code
     com.apple.ScreenSharing:       { ascii_mode: false }   # Screen Sharing
     ru.keepcoder.Telegram:         { ascii_mode: false }   # Telegram
     com.tencent.xinWeChat:         { ascii_mode: false }   # WeChat

@@ -12,7 +12,7 @@
 - **默认方案**：纯小鹤双拼；备选薄荷·小鹤混输（全拼+小鹤）、薄荷·全拼
 - **词库与语言模型**：薄荷基座自带**万象词库** + **万象 LTS** 整句语言模型（`wanxiang-lts-zh-hans.gram`，脚本自动下载）
 - **默认中英状态**：默认**英文**；未列出的 App 默认英文
-- **按 App 自动中英**：15 个 App 固定中文（微信、Telegram、Chrome、Obsidian、Notion、ChatGPT、Gemini……），6 个固定英文（Finder、kitty、系统设置、Clash Verge、Karabiner、Tinycast）
+- **按 App 自动中英**：16 个 App 固定中文（微信、Telegram、Chrome、Obsidian、Notion、ChatGPT、Gemini、T3 Code……），6 个固定英文（Finder、kitty、系统设置、Clash Verge、Karabiner、Tinycast）
 - **外观**：横排候选 + `ink` 黑白皮肤（跟随系统深浅色）+ 苹方字体
 - **候选**：每页 6 个，**长词优先**
 - **编码长度上限**：100（可打长句）
